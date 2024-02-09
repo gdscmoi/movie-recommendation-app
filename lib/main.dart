@@ -14,12 +14,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: darkBlue,
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-      backgroundColor: Colors.transparent,
-        ),
-        body:  HomePage(),
-      ),
+      home: HomePage(),
     );
   }
 }
@@ -27,7 +22,11 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return  Scaffold(
+        appBar: AppBar(
+      backgroundColor: Colors.transparent,
+        ),
+        body:         Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children : [
       const Text('Let\'s find a movie'),
@@ -45,6 +44,8 @@ class HomePage extends StatelessWidget {
                   ),  
          child: const Text('Let\'s get started'))
         
-    ]);
+    ]
+       ),
+    );
   }
 }
